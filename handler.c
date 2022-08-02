@@ -15,7 +15,7 @@ int handler(const char *str, va_list list)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] =='%')
+		if (str[i] == '%')
 		{
 			aux = percent_handler(str, list, &i);
 
