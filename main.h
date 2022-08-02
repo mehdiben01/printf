@@ -5,25 +5,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-/**
- * File: main.h
- *
- * Desc: header file
-**/
-
-/**
- * struct _format - typdef struct
- * @type: format
- * @f: the function associated
-**/
-
-typedef struct _formatx
-{
-	char type;
-	int (*f)(va_list);
-} format;
-
-
+/* utils.c */
 int _strlen(const char *);
 int print(char *);
 char *itoa(long int, int);
@@ -31,6 +13,7 @@ char *itoa(long int, int);
 /* printf.c */
 int _printf(const char *, ...);
 
+/* handler.c */
 int handler(const char *, va_list);
 int percent_handler(const char *, va_list, int *);
 
@@ -51,4 +34,17 @@ int print_rev_string(va_list);
 int _putchar(char);
 int buffer(char);
 
-#endif /* MAIN_H  */
+/**
+ * struct _format - Typedef struct
+ *
+ * @type: Format
+ * @f: The function associated
+ **/
+typedef struct _format
+{
+	char type;
+	int (*f)(va_list);
+} format;
+
+
+#endif /* MAIN_H */

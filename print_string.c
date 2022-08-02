@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * print_string - Printz string
+ * print_string - Print string
  * @list: list.
+ *
  * Return: String length.
-**/
+ */
 
 int print_string(va_list list)
 {
